@@ -1,14 +1,20 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CreateDitctionary : MonoBehaviour
 {
-    public Sprite[] Image1x1;
-    public Sprite[] Image1x2;
-    public Format[] formats;
+    private string[] words = { "hi", "tree", "bread", "dog" };
+    [SerializeField] private Sprite[] charSprites;
+    public Dictionary translator;
     
-    void start()
+    void Awake()
     {
-        
+        translator.translator = new Dictionary<string, Sprite>();
+
+        for (int i = 0; i < words.Length; i++)
+        {
+            translator.translator.Add(words[i], charSprites[i]);
+        }
     }
 
 }
