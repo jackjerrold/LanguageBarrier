@@ -4,9 +4,15 @@ using UnityEngine;
 public class Translator : MonoBehaviour
 {
     public Dictionary<string, Character> translator;
-
-    private void Start()
+    
+    public Character[] translate(string input)
     {
-        Debug.Log(translator.Count);
+        string[] words = input.Split(" ");
+        Character[] result = new Character[words.Length];
+        for (int i = 0; i < words.Length; i++)
+        {
+            result[i] = translator[words[i]];
+        }
+        return result;
     }
 }

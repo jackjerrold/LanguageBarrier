@@ -5,7 +5,7 @@ public class CreateDictionary : MonoBehaviour
 {
     public Translator translator;
 
-    private string[] words = { "hi", "tree", "bread", "dog" };
+    private string[] words = { "hi", "my", "name", "is", "tom" };
     [SerializeField] private Sprite[] charSprites;
 
     public Dictionary<string, Character> dict;
